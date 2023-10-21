@@ -13,14 +13,19 @@ subBtn.addEventListener("click", ()=> {
 
     // USE FETCH API TO GET THE DATA AND POPULATE THE DESIRED HTML ELEMENTS
     fetch(apiUrl)
-        .then(response => response.json())
+        .then(response => response.json());
         .then((data)=>{
-            popuDiv.innerHTML = `
-            City Name: ${data.name} <br>
-            Temperature: ${data.main.temp } °C <br>
+            const cityName = document.querySelector("#city-name");
+            const temp = document.querySelector("#temp");
+            const condition = document.querySelector("#condition");
+            popuDiv.innerHTML = /*`
             Weather Condition: ${data.weather[0].main} <br>
             Weather description: ${data.weather[0].description} 
-            `
+            `*/ 
+            cityName.textContent = data.name;
+            temp.textContent = (data.main.temp - 273.15).toFixed(2) + " °C";
+            condition.textContent = data.weather[0].main
+
         }) 
         .catch((error)=> {
             popuDiv.textContent = "Error was found";

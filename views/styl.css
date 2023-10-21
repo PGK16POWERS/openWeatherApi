@@ -20,11 +20,25 @@ body {
     --monts: 'Montserrat', sans-serif;
 }
 
+#city-name {
+    font-size: 2.5em;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
 h1 {
     font-size: 3em;
     color: white;
     letter-spacing: 2px;
     font-weight: 500;
+}
+
+#condition {
+    font-size: 2em;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 400;
 }
 
 /**** CONTENT SECTION ****/
@@ -68,5 +82,7 @@ h1 {
 #WeaherDets {
     color: honeydew
 }
+
+
 
 /**** CONTENT SECTION ****/
