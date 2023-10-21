@@ -13,7 +13,7 @@ subBtn.addEventListener("click", ()=> {
 
     // USE FETCH API TO GET THE DATA AND POPULATE THE DESIRED HTML ELEMENTS
     fetch(apiUrl)
-        .then(response => response.json());
+        .then(response => response.json())
         .then((data)=>{
             const cityName = document.querySelector("#city-name");
             const temp = document.querySelector("#temp");
